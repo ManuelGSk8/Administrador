@@ -45,7 +45,7 @@
         		<ul class="sidebar-menu">
             		<li class="header">Menú</li>
             		<li class="active">
-		            	<a href="{{ route('home') }}">
+		            	<a href="{{ route('dashboard') }}">
 		            		<i class="fa fa-dashboard"></i> 
 		            		<span>Dashboard</span> 		            		
 		            	</a>		            	

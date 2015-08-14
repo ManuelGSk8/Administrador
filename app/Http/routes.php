@@ -19,4 +19,5 @@ Route::get('/home',function() {
 	return view('Home.home');
 });
 */
-Route::get('/home',['as' => 'home', 'uses' => 'HomeController@index']);
+Route::get('/dashboard',['as' => 'dashboard', 'uses' => 'HomeController@index']);
+Route::get('/repoTest',['as' => 'repoTest', 'uses' => 'HomeController@repoTest']);
