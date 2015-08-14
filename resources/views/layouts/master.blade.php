@@ -63,8 +63,8 @@
         </div>
 	</div>
 
-	
-
     @include('_Partial.scripts')
+
+    @yield('scripts')
 </body>
 </html>

@@ -6,6 +6,11 @@
 <!-- Ionicons 2.0.0  Revisar si es necesario bajarlo o usarlo-->
 <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
 
+<!-- daterange picker
+<link href="{{URL::asset('assets/scripts/plugins/daterangepicker/daterangepicker-bs3.css')}}" rel="stylesheet" type="text/css" />
+-->
+<!-- Date Picker Bootstrap -->
+<link href="{{URL::asset('assets/scripts/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css')}}" rel="stylesheet" type="text/css" />
 <!-- Theme style -->
 <link href="{{URL::asset('assets/content/AdminLTE/css/AdminLTE.min.css')}}" rel="stylesheet" type="text/css" />
 

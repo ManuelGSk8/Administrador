@@ -21,3 +21,5 @@ Route::get('/home',function() {
 */
 Route::get('/dashboard',['as' => 'dashboard', 'uses' => 'HomeController@index']);
 Route::get('/repoTest',['as' => 'repoTest', 'uses' => 'HomeController@repoTest']);
+Route::get('/createBanner',['as' => 'createBanner', 'uses' => 'BannerController@showCreateBanner']);
+Route::post('/createBanner',['as' => 'createBanner', 'uses' => 'BannerController@CreateBanner']);
