@@ -10,6 +10,6 @@ class Banners extends Model implements Transformable
 {
     use TransformableTrait;
 
-    protected $fillable = [];
+    protected $fillable = ['id','titulo','url_link','fecha_inicio','fecha_fin','estado','created_at','updated_at'];
 
 }
