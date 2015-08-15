@@ -59,12 +59,16 @@
                                 </div><!-- /.input group -->
                             </div><!-- /.form group -->
                             <div class="form-group col-md-12">
+                                [[ Form::label('estado', 'Estado') ]]
+                                [[ Form::select('estado',$listEstadActivacion,'',['class' => 'form-control', 'id' => 'estado']) ]]
+                            </div>
+                            <div class="form-group col-md-12">
                                 <label for="exampleInputFile">Slider</label>
                                 <input type="file" id="exampleInputFile" accept="image/*">
                             </div>
                         </div><!-- /.box-body -->
                         <div class="box-footer">
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary">Guardar</button>
                         </div>
                     [[ Form::close() ]]
                     <!--

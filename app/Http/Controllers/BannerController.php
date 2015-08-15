@@ -9,6 +9,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers;
 use App\Repositories\Banners\BannersRepositoryEloquent as BannerRepo;
+use App\Repositories\Parametros\ParametrosRepositoryEloquent;
 use App\Entities\Banners\Banners;
 use App\Enums\EnumParametro;
 
@@ -22,10 +23,12 @@ class BannerController extends Controller
      */
 
     protected $repository;
+    protected $repoParametro;
 
-    public function __construct(BannerRepo $repository)
+    public function __construct(BannerRepo $repository, ParametrosRepositoryEloquent $repoParametro)
     {
         $this->repository = $repository;
+        $this->repoParametro = $repoParametro;
 
     }
 
@@ -33,11 +36,17 @@ class BannerController extends Controller
 
     public function showCreateBanner()
     {
+        $idEstadoActivacion = $this->repoParametro->findByField("nombrecorto",EnumParametro::Estado_Activacion)->select('id')->get();
+        $listEstadActivacion = $this->repoParametro->findByField('padreid',$idEstadoActivacion[0]->id)->lists('nombre','valor');
+
+
+        //dd($idEstadoActivacion);
+
         //dd(EnumParametro::Estado_Activacion);
 
 
 
-        return view('Banner.createBanner');
+        return view('Banner.createBanner',compact('listEstadActivacion'));
     }
 
 }
