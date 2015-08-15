@@ -4,7 +4,7 @@
 
 @section('content')
     <!-- Content Header (Page header) -->
-    <section class="content-header">
+    <section class="content-header" style="height:30px;">
         <!--
         <h1>
             Nuevo Banner
@@ -30,16 +30,16 @@
                     <!-- form start -->
                     [[ Form::open(['route' => 'createBanner', 'method' => 'POST', 'role'=>'form', 'novalidate']) ]]
                         <div class="box-body">
-                            <div class="form-group">
+                            <div class="form-group col-md-12">
                                 [[ Form::label('titulo', 'Título del Banner') ]]
                                 [[ Form::text('titulo', '',['class' => 'form-control', 'id' => 'titulo']) ]]
                             </div>
-                            <div class="form-group">
+                            <div class="form-group col-md-12">
                                 [[ Form::label('url_link', 'Link') ]]
                                 [[ Form::text('url_link', '',['class' => 'form-control', 'id' => 'url_link']) ]]
                             </div>
-                            <!-- Date range -->
-                            <div class="form-group">
+                            <!-- Date Picker Fecha Inicio -->
+                            <div class="form-group col-md-6">
                                 [[ Form::label('fecha_inicio', 'Fecha Inicio') ]]
                                 <div class="input-group">
                                     <div class="input-group-addon">
@@ -48,6 +48,20 @@
                                     [[ Form::text('fecha_inicio', '',['class' => 'form-control pull-right', 'id' => 'fecha_inicio']) ]]
                                 </div><!-- /.input group -->
                             </div><!-- /.form group -->
+                            <!-- Date Picker Fecha Fin -->
+                            <div class="form-group col-md-6">
+                                [[ Form::label('fecha_fin', 'Fecha Final') ]]
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-calendar"></i>
+                                    </div>
+                                    [[ Form::text('fecha_fin', '',['class' => 'form-control pull-right', 'id' => 'fecha_fin']) ]]
+                                </div><!-- /.input group -->
+                            </div><!-- /.form group -->
+                            <div class="form-group col-md-12">
+                                <label for="exampleInputFile">Slider</label>
+                                <input type="file" id="exampleInputFile" accept="image/*">
+                            </div>
                         </div><!-- /.box-body -->
                         <div class="box-footer">
                             <button type="submit" class="btn btn-primary">Submit</button>
@@ -97,6 +111,11 @@
             */
 
             $('#fecha_inicio').datepicker({
+                autoclose: true,
+                todayHighlight: true
+            });
+
+            $('#fecha_fin').datepicker({
                 autoclose: true,
                 todayHighlight: true
             });

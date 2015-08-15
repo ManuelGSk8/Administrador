@@ -10,6 +10,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers;
 use App\Repositories\Banners\BannersRepositoryEloquent as BannerRepo;
 use App\Entities\Banners\Banners;
+use App\Enums\EnumParametro;
 
 class BannerController extends Controller
 {
@@ -32,6 +33,9 @@ class BannerController extends Controller
 
     public function showCreateBanner()
     {
+        //dd(EnumParametro::Estado_Activacion);
+
+
 
         return view('Banner.createBanner');
     }
