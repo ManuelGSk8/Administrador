@@ -1,9 +1,4 @@
-@extends('layouts.master')
-
-@section('title', 'Page Title')
-
-@section('content')
-    <!-- Content Header (Page header) -->
+<!-- Content Header (Page header) -->
     <section class="content-header" style="height:30px;">
         <!--
         <h1>
@@ -102,7 +97,6 @@
             </div>
         </div>
     </section>
-@stop
 @section('scripts')
     <script type="text/javascript">
         $(document).ready(function(){

@@ -96,7 +96,7 @@ class BannerController extends Controller
 
     public function showCreateBanner()
     {
-        $idEstadoActivacion = $this->repoParametro->findByField("nombrecorto",EnumParametro::Estado_Activacion)->select('id')->get();
+        $idEstadoActivacion = $this->repoParametro->findByField("nombrecorto",EnumParametro::Estado_Activacion);
         $listEstadActivacion = $this->repoParametro->findByField('padreid',$idEstadoActivacion[0]->id)->lists('nombre','valor');
 
 
